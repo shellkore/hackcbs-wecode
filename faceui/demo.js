@@ -1,0 +1,57 @@
+// Create a new  Use one instance for each camera
+window.handsfree = new window.Handsfree({})
+// const $emoji = document.querySelector('#emoji')
+
+// // Disable click and vert scroll
+Handsfree.disable('head.pointer')
+Handsfree.disable('head.vertScroll')
+
+var buttonOne = 0, buttonTwo = 0 , buttonThree = 0 , buttonFour = 0, threshold = 50 ;
+
+
+// Create a simple plugin that displays pointer values on every frame
+Handsfree.use('emojify', ({head}) => {
+
+  let state = head.state
+
+  if(state.smileLeft){
+      buttonOne++;
+  }else if(!state.smileLeft)
+      buttonOne = 0;
+
+
+  if(state.smileLeft && buttonOne == threshold){
+    console.log("1st left smile");
+  }
+
+
+
+  if(state.smileRight){
+    buttonTwo++;
+  }else if(!state.smileRight)
+    buttonTwo = 0 ;
+
+  if(state.smileRight && buttonTwo == threshold)
+    console.log("2nd right smile");
+
+
+
+  if(state.mouthOpen){
+    buttonThree++;
+  }else if(!state.mouthOpen)
+    buttonThree = 0;
+
+  if(state.mouthOpen && buttonThree == threshold){
+    console.log("3rd mouthOpen");
+  }
+
+  if(state.eyesClosed){
+      buttonFour++;
+  }else if(!state.eyesClosed)
+      buttonFour=0;
+
+  if(state.eyesClosed && buttonFour == threshold)
+    console.log("4th eyesClosed");
+
+});
+

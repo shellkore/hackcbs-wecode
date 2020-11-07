@@ -1,0 +1,57 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+button {
+  font-size: 18px;
+  padding: 15px;
+}
+
+
+/* Stylized Stuff */
+header {
+  padding: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  box-shadow: 0 0 3px rgba(0,0,0,0.35);
+}
+
+header h1, header img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+header h1 small {
+  display: block;
+  font-size: 16px;
+  text-align: center;
+}
+
+header h1 {
+  margin-right: 20px;  
+}
+
+p {
+  padding: 0 20px;
+}
+
+#emoji {
+  text-align: center;
+  font-size: 200px;
+  margin: auto;
+}
+
+.text-center {text-align: center;}
+
+/* Handsfree overrides */
+.handsfree-debugger {
+/*   display: none; */
+}
+
+.handsfree-pointer {display: none !important}
+
+.handsfree-hide-when-started {display: initial}
+.handsfree-hide-when-stopped {display: none}
+.handsfree-started .handsfree-hide-when-started {display: none}
+.handsfree-started .handsfree-hide-when-stopped {display: initial}
