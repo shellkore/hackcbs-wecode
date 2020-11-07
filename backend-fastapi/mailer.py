@@ -52,32 +52,6 @@ def send_message(service, user_id, message):
     except errors.HttpError as error:
         return error
 
-
-def sendWelcomeMail(to, toName, fr, textMessage):
-    if toName != "":
-        subjectText = f"Hi {toName}, Welcome to CaffeTable!!"
-    else:
-        subjectText = f"Welcome to CaffeTable!!"
-    creds = None
-    if os.path.exists("token.pickle"):
-        with open("token.pickle", "rb") as token:
-            creds = pickle.load(token)
-    # If there are no (valid) credentials available, let the user log in.
-    if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
-            flow = InstalledAppFlow.from_client_secrets_file("credentials.json", SCOPES)
-            creds = flow.run_local_server(port=0)
-        # Save the credentials for the next run
-        with open("token.pickle", "wb") as token:
-            pickle.dump(creds, token)
-
-    service = build("gmail", "v1", credentials=creds)
-
-    message = create_message(to, fr, subjectText,htmlfile = 'caffetable-welcome-mail.html')
-    sent = send_message(service, "me", message)
-    print(f"mail sent to {to}. ID: {sent}")
     return True
 
 def sendMail(to, fr, subText, textMessage):
@@ -85,12 +59,9 @@ def sendMail(to, fr, subText, textMessage):
         with open("token.pickle", "rb") as token:
             creds = pickle.load(token)
     # If there are no (valid) credentials available, let the user log in.
-    if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
-            flow = InstalledAppFlow.from_client_secrets_file("credentials.json", SCOPES)
-            creds = flow.run_local_server(port=0)
+    else:
+        flow = InstalledAppFlow.from_client_secrets_file("credentials.json", SCOPES)
+        creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
         with open("token.pickle", "wb") as token:
             pickle.dump(creds, token)
