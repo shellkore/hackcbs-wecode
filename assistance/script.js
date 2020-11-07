@@ -1,7 +1,7 @@
 /* If you're feeling fancy you can add interactivity 
     to your site with Javascript */
 
-const home = "https://third-nonstop-safflower.glitch.me/";
+const home = "https://4366163892ce.ngrok.io/assistance/";
 
 const sendmail = service => {
   let msgBody;
@@ -25,7 +25,7 @@ const sendmail = service => {
     }
 
     const data = JSON.stringify({
-      mailid: "shaileshkumar2604@gmail.com",
+      mailid: "shivampathak339@gmail.com",
       subject: "Notification from Wecode",
       message: msgBody
     });

@@ -8,7 +8,7 @@
     <title>Assistance</title>
 
     <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -16,11 +16,12 @@
       crossorigin="anonymous"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/handsfree@6.0.1/dist/handsfreejs/handsfree.css"
-    />
-    <script src="https://unpkg.com/handsfree@6.0.1/dist/handsfreejs/handsfree.js"></script>
+      <link
+    rel="stylesheet"
+    href="https://unpkg.com/handsfree@6.1.1/dist/handsfree.css"
+  />
+  <script src="https://unpkg.com/handsfree@6.1.1/dist/handsfree.js"></script>
+</head>
 
     <!-- import the webpage's javascript file -->
     <script
@@ -33,15 +34,16 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
-    <script src="/script.js" defer></script>
+    <script src="./script.js" defer></script>
+    <script type="text/javascript" src="../faceui/demo.js" defer></script>
   </head>
   <body>
-    <button onclick="handsfree.start()">Start Webcam</button>
     <div class="aside-bar">
       <p>home</p>
     </div>
     <div class="line">
       <div
+        id = "buttonOne"
         class="col-md-6 quad"
         style="background-color:blue;"
         onclick="sendmail('water')"
@@ -49,6 +51,7 @@
         I want water
       </div>
       <div
+        id = "buttonTwo"
         class="col-md-6 quad"
         style="background-color:green;"
         onclick="sendmail('food')"
@@ -56,6 +59,7 @@
         I want Food
       </div>
       <div
+        id = "buttonThree"
         class="col-md-6 quad"
         style="background-color:yellow;"
         onclick="sendmail('assist')"
@@ -63,6 +67,7 @@
         Need Assistance
       </div>
       <div
+        id= "buttonFour"
         class="col-md-6 quad"
         style="background-color:red;"
         onclick="sendmail('speak')"
@@ -91,15 +96,17 @@
         </div>
       </div>
     </div>
-    <script>
-      // Create a new instance. Use one instance for each camera
-      const handsfree = new Handsfree({});
-      // Create a simple plugin that displays pointer values on every frame
-      Handsfree.use("consoleLogger", ({ head }) => {
-        console.log(head.rotation);
-      });
-    </script>
+  <script>
+    // Create a new instance. Use one instance for each camera
+    const handsfree = new Handsfree({})
+
+    handsfree.start()
+    handsfree.disable('head.pointer')
+    handsfree.disable('head.vertScroll')
+  </script>
 
     <script src="https://button.glitch.me/button.js" defer></script>
+
   </body>
+
 </html>

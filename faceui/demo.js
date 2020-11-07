@@ -1,6 +1,5 @@
 // Create a new  Use one instance for each camera
 window.handsfree = new window.Handsfree({})
-// const $emoji = document.querySelector('#emoji')
 
 // // Disable click and vert scroll
 Handsfree.disable('head.pointer')
@@ -22,6 +21,9 @@ Handsfree.use('emojify', ({head}) => {
 
   if(state.smileLeft && buttonOne == threshold){
     console.log("1st left smile");
+
+    $("#buttonOne").click();
+
   }
 
 
@@ -31,8 +33,10 @@ Handsfree.use('emojify', ({head}) => {
   }else if(!state.smileRight)
     buttonTwo = 0 ;
 
-  if(state.smileRight && buttonTwo == threshold)
+  if(state.smileRight && buttonTwo == threshold){
     console.log("2nd right smile");
+    $("#buttonTwo").click();
+  }
 
 
 
@@ -43,6 +47,7 @@ Handsfree.use('emojify', ({head}) => {
 
   if(state.mouthOpen && buttonThree == threshold){
     console.log("3rd mouthOpen");
+    $("#buttonThree").click();
   }
 
   if(state.eyesClosed){
@@ -50,8 +55,9 @@ Handsfree.use('emojify', ({head}) => {
   }else if(!state.eyesClosed)
       buttonFour=0;
 
-  if(state.eyesClosed && buttonFour == threshold)
+  if(state.eyesClosed && buttonFour == threshold){
     console.log("4th eyesClosed");
+    $("#buttonFour").click();
+  }
 
 });
-
