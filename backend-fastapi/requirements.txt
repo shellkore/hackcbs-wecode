@@ -1,0 +1,10 @@
+google_auth_oauthlib==0.4.1
+pydantic==1.6.1
+uvicorn==0.12.1
+fastapi==0.61.1
+google_api_python_client==1.12.3
+protobuf==3.13.0
+gunicorn
+uvloop
+httptools
+dnspython
