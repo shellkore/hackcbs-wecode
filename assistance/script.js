@@ -1,6 +1,8 @@
 /* If you're feeling fancy you can add interactivity 
     to your site with Javascript */
 
+const home = "https://third-nonstop-safflower.glitch.me/";
+
 const sendmail = service => {
   let msgBody;
   $(".quad")
@@ -43,4 +45,5 @@ const sendmail = service => {
       console.log(response);
     });
   }
+  setTimeout(() => {window.location.replace(home)}, 4000);
 };
