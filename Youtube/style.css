@@ -1,0 +1,71 @@
+main {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+main > section { margin-bottom: 1em; }
+
+main > section div.framed > div {
+    border: 1px solid black;
+    margin-bottom: 1ex;
+    padding: 1ex;
+}
+
+main > section button { padding: 0.5ex 1em; }
+
+main > section input[type="range"] { width: 400px; }
+
+main > section label[for^="YouTube-player-"] { position: absolute; }
+
+main > section textarea {
+    height: 9ex;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    width: 99%;
+}
+
+
+.center { text-align: center; }
+
+.margin-left-m { margin-left: 1em; }
+.margin-right-m { margin-right: 1em; }
+
+.nowrap { white-space: nowrap; }
+
+
+#indicator-display {
+    background-color: #f0f0f0;
+    border-radius: 3ex;
+    display: inline-block;
+    float: right;
+    font-family: monospace;
+    height: 2ex;
+    line-height: 2ex;
+    margin: 1ex 1ex 0 0;
+    padding: 1ex;
+    text-align: center;
+    vertical-align: middle;
+    width: 2ex;
+}
+
+#YouTube-video-id { font-family: monospace; }
+
+
+@media (max-width: 600px) {
+    main > section iframe {
+      height: 240px;
+      width: 320px;
+    }
+
+    main > section input[type="range"] { width: 320px; }
+}
+
+@media (max-width: 400px) {
+    main > section iframe {
+      height: 200px;
+      width: 200px;
+    }
+
+    main > section input[type="range"] { width: 200px; }
+}
