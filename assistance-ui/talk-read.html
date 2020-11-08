@@ -16,6 +16,7 @@
      integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous">
    </script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="aside-bar.css">
     
  
     <script src="index.js" defer></script>
@@ -45,23 +46,23 @@
     </style>
   </head>  
   <body>
-    <div class="aside-bar">
-      <p>TYPE</p>
+    <div class="aside-bar" onclick="location.href = 'home.html';">
+      <p>HOME</p>
     </div>
 
 <div class="cover">
-<div class="cover-item item-1 zone-1">
+<div class="cover-item item-1 zone-1" onclick="location.href = 'exp-board.html';">
     <p class="info-text">
-        READ NEWS
+      KEYBOARD TALK
         </p>
 </div>
-<div class="cover-item item-2 zone-2">
-    <button onclick="modalOpen('book1')" class="info-text book">
-        book 1
+<div class="cover-item item-2 zone-2" >
+    <button class="info-text book" onclick="location.href = 'book1.html';">
+      BOOK : Be Happy
     </button>
-    <button class="info-text book">
+    <button class="info-text book" onclick="location.href = 'book2.html';">
        
-   book2
+  BOOK : The life of Jungle
     </button>    
 </div>
 </div>
@@ -70,7 +71,7 @@
 
 
   <!-- Modal HTML -->
-  <div id="myModal-book1" class="modal fade bd-example-modal-lg">
+  <!-- <div id="myModal-book1" class="modal fade bd-example-modal-lg">
     <div class="modal-dialog modal-confirm">
         <div class="action-control">
             <button onclick="scrollWin(0, 50)">Scroll down</button>
@@ -112,7 +113,7 @@
 
       </div> -->
     </div>
-  </div>
+  </div> -->
 
   <script>
 

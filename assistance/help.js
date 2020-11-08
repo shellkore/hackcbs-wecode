@@ -1,7 +1,7 @@
 /* If you're feeling fancy you can add interactivity 
     to your site with Javascript */
 
-const home = "https://4366163892ce.ngrok.io/assistance/";
+const home = "assistance/help.html";
 
 const sendmail = service => {
   let msgBody;

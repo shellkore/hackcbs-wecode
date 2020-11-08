@@ -1,0 +1,70 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  min-height: 100%;
+}
+
+.quad {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.line {
+  height: 50%;
+  width: 93%;
+  float: right;
+}
+
+.equal,
+.equal > div[class*="col-"] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1 0 auto;
+}
+
+.aside-bar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: black;
+  height: 100%;
+  width: 7%;
+}
+
+.aside-bar p {
+  margin-top: 300px;
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -moz-transform: rotate(90deg); /* Firefox */
+  -webkit-transform: rotate(-90deg);
+  font-size: 40px;
+  color: white;
+}
+
+
+
+.info-text{
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.6); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 40px;
+  text-align: center;
+  font-size:40px;
+  text-transform:uppercase;
+  box-shadow: -1px 0px 145px -10px rgba(10,6,6,0.75);
+  -webkit-box-shadow: -1px 0px 145px -10px rgba(10,6,6,0.75);
+  -moz-box-shadow: -1px 0px 145px -10px rgba(10,6,6,0.75);
+  }
+  

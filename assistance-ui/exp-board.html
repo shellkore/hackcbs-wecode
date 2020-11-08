@@ -21,10 +21,15 @@
 
     <!-- import the webpage's javascript file -->
     <script src="./exp-board.js" defer></script>
-    <script type="text/javascript" src="../faceui/keyboard.js" defer></script>
+    <script type="text/javascript" src="faceui/keyboard.js" defer></script>
+    <link rel="stylesheet" href="aside-bar.css">
 
   </head>
-  <body onload="myFunction()">
+  <body >
+    <div class="aside-bar" onclick="location.href = 'home.html';">
+      <p>HOME</p>
+    </div>
+
     <div class="screen">
       <p id="output"></p>
     </div>

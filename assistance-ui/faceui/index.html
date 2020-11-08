@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hello!</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/handsfree@6.0.1/dist/handsfreejs/handsfree.css" />
+  <script src="https://unpkg.com/handsfree@6.0.1/dist/handsfreejs/handsfree.js"></script>
+
+
+  </head>  
+  <body>
+    <div class="aside-bar">
+      <p>HOME</p>
+    </div>
+
+    <button class="handsfree-hide-when-started" onclick = "handsfree.start()">Start Webcam</button>
+    <button id = "buttonOne" class="handsfree-hide-when-stopped" onclick="handsfree.stop()">Stop Webcam</button>    
+
+    <div class="line">
+  <div class="col-md-6 quad zone-1" style="background-color:blue;"><p class="info-text">
+    🎭Enternaiment
+    </p></div>
+
+    <div class="col-md-6 quad zone-2" style="background-color:red;"><p class="info-text">
+    📰News
+    </p></div>
+
+    <div class="col-md-6 quad zone-3" style="background-color:yellow;"><p class="info-text">
+    🎮Games
+    </p></div>
+    <div class="col-md-6 quad zone-4" style="background-color:green;"><p class="info-text">
+    💁Help
+    </p></div>
+</div>
+
+  </body>
+
+    <script defer src="./demo.js"></script>
+</html>

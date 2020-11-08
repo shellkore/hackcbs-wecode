@@ -1,0 +1,18 @@
+.aside-bar{
+font-family: Arial, Helvetica, sans-serif;
+position:fixed;
+left:0;
+top:0;
+background-color:black;
+height:100%;
+width:7%;
+}
+
+.aside-bar p{
+margin-top:300px;
+-ms-transform:rotate(90deg); /* IE 9 */
+-moz-transform:rotate(90deg); /* Firefox */
+-webkit-transform:rotate(-90deg); 
+font-size:40px;
+color:white
+}

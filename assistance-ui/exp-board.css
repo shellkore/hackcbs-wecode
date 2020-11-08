@@ -1,0 +1,137 @@
+.keyboard {
+  float: right;
+  border-radius: 4px;
+  color: #555;
+  
+  font: bold 20px Helvetica, Arial;
+ 
+  padding: 8px;
+ width:90%;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+ 
+  margin: auto;
+/*   background-color:black; */
+}
+
+.key {
+ 
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+ 
+  padding-left:14px;
+  font-size:22px;
+ 
+  position: relative;
+  vertical-align: top;
+  
+  transition: all ease-in-out;
+	
+	 margin: 0.25em;
+	 text-decoration: none;
+
+	 font-weight: 600;
+	 color: #3e2723;
+	 background-color: transparent;
+	 outline: 0;
+	 cursor: pointer;
+
+	 height: 80px;
+	 text-overflow: ellipsis;
+	 white-space: nowrap;
+	 overflow: hidden;
+	 font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	 border: 1px dashed transparent;
+	 box-shadow: 0 13px 6px rgba(0, 0, 0, 0.14);
+  background-color:white;
+}
+
+.key:hover {
+	 color: #fff;
+	 background-color: #3e2723;
+	 border: 1px dashed #3e2723;
+}
+
+.key:active {
+  background: -moz-linear-gradient(left, #C8C8C8 0%, #D8D8D8 20px, #E5E5E5 35px, #FAFAFA 100%);
+  background: -webkit-linear-gradient(left, #C8C8C8 0%, #D8D8D8 20px, #E5E5E5 35px, #FAFAFA 100%);
+  box-shadow: 1px -3px 6px rgba(100, 100, 100, 0.6), -3px -3px 6px rgba(100, 100, 100, 0.3), 4px -2px 6px rgba(100, 100, 100, 0.3);
+  top: 1px;
+}
+
+.selected {
+  background-color: yellow;
+}
+
+.w2 {
+  text-transform: uppercase;
+  width: 16%;
+  padding:20px;
+}
+
+.w3 {
+  width: 83px;
+}
+
+.w4 {
+  width: 112px;
+}
+
+.w5 {
+  width: 141px;
+}
+
+.w12 {
+  width: 70%;
+}
+
+
+.screen {
+  float: right;
+  border:5px solid #444;
+  border-radius: 10px;
+  height: 40px;
+  overflow: auto;
+  
+  width: 90%;
+  margin:auto;
+  
+  margin-bottom:10px;
+}
+
+
+.screen p {
+  display: inline-block;
+  font-family: Courier, monospace;
+  margin: 0;
+  padding: 0;
+}
+
+.screen p:after {
+  content: "|";
+  position: relative;
+  right: 3px;
+  -webkit-animation-name: blinker;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: blinker;
+  -moz-animation-duration: 1.5s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+}
+
+@-webkit-keyframe blinker {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframe blinker {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
