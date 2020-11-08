@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Watch a video</title>
+  <link rel="stylesheet" href="entertainment.css">
+
+  <style>
+      .buttons {
+position: relative;
+margin: 0 auto 20px auto;
+padding: 20px;
+float: left;
+display: block;
+background-color: #eee;
+border-radius: 4px;
+}
+.buttons:after {
+top: 100%;
+left: 50%;
+border: solid transparent;
+content: " ";
+height: 0;
+width: 0;
+position: absolute;
+pointer-events: none;
+border-color: rgba(238, 238, 238, 0);
+border-top-color: #eee;
+border-width: 10px;
+margin-left: -10px;
+}
+.button {
+padding: 10px 20px;
+font-weight: bold;
+letter-spacing: 5px;
+outline: none;
+cursor: pointer;
+color: white;
+background-color: #7F8C8D;
+border: none;
+border-radius: 4px;
+}
+#play-button {
+background-color: #2ECC71;
+}
+#play-button:hover {
+background-color: #27AE60;
+}
+#pause-button {
+background-color: #E67E22;
+}
+#pause-button:hover {
+background-color: #D35400;
+}
+#stop-button {
+background-color: #E74C3C;
+}
+#stop-button:hover {
+background-color: #C0392B;
+}
+#pause-button,
+#stop-button {
+margin-left: 15px;
+}
+iframe {
+margin: 0 auto;
+width: 100%;
+height: 600px;
+float: left;
+clear: both;
+display: block;
+background-color: #eee;
+}
+  </style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<main>
+  <section>
+    <div class="center">
+      <h2>Enjoy <code>your</code> day</h2>
+      <div class="buttons">
+          <button class="button" id="play-button" onclick="ytytytyt()";>PLAY / PAUSE</button>
+          <!-- <button class="button" id="pause-button" onclick="ytytytyt()";>PAUSE</button> -->
+          <!-- <button class="button" id="stop-button" onclick="youTubePlayerStop();">STOP</button> -->
+          <button class="button" onclick="document.getElementById('YouTube-video-id').value='1X9RvuSuU_Y';  youTubePlayerChangeVideoId();" id="prev-button">PREV</button>
+          <button class="button" onclick="document.getElementById('YouTube-video-id').value='F2Ug3VkFuDw';  youTubePlayerChangeVideoId();" id="next-button">NEXT</button>
+          <button class="button" id="stop-button">HOME</button>
+
+      </div>
+      <div id="YouTube-player"></div>
+
+      <div>
+        <span class="nowrap" style="display: none">
+          <button onclick="document.getElementById('YouTube-video-id').value='1X9RvuSuU_Y'; youTubePlayerChangeVideoId();" title="In the summertime (Mungo Jerry)">1</button>
+          <button onclick="document.getElementById('YouTube-video-id').value='F2Ug3VkFuDw'; youTubePlayerChangeVideoId();" title="Peter Popoff pris la main dans le sac par James Randi">2</button>
+          <button onclick="document.getElementById('YouTube-video-id').value='1X9RvuSuU_Y'; youTubePlayerChangeVideoId();" title="The Steven Seagal Show #002">3</button>
+          <button onclick="document.getElementById('YouTube-video-id').value='1X9RvuSuU_Y'; youTubePlayerChangeVideoId();" title="The Man from Earth (Richard Schenkman)">4</button>
+        </span>
+
+        <span class="nowrap margin-left-m margin-right-m" style="display: none">
+          <label for="YouTube-video-id">videoId</label>:
+          <input id="YouTube-video-id" type="text" value="1X9RvuSuU_Y" size="12" pattern="[_\-0-9A-Za-z]{11}" onchange="youTubePlayerChangeVideoId();">
+        </span>
+
+        <!-- <span class="nowrap">
+          <button onclick="youTubePlayerPlay();">Play</button>
+          <button onclick="youTubePlayerPause();">Pause</button>
+          <button onclick="youTubePlayerStop();">Stop</button>
+        </span>
+      </div> -->
+
+      <!-- <div>
+        <input id="YouTube-player-progress" type="range" value="0" min="0" max="100" onchange="youTubePlayerCurrentTimeChange(this.value);" oninput="youTubePlayerCurrentTimeSlide();">
+        <label for="YouTube-player-progress">duration</label>
+      </div>
+
+      <div>
+        <input id="YouTube-player-volume" type="range" value="50" min="0" max="100" onchange="youTubePlayerVolumeChange(this.value);">
+        <label for="YouTube-player-volume">volume</label>
+      </div> -->
+    </div>
+
+    <!-- <div class="framed">
+      <div id="YouTube-player-infos"></div>
+      <div id="YouTube-player-errors"></div>
+      <div id="YouTube-player-fixed-infos"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ul>
+      <li>
+        This example on my website:
+        <strong><a href="http://www.opimedia.be/DS/webdev/YouTube/">YouTube <abbr>API</abbr> example</a></strong>
+      </li>
+      <li>
+        YouTube:
+        <ul>
+          <li><a href="https://developers.google.com/youtube/iframe_api_reference"><em>YouTube Player <abbr>API</abbr> Reference for <code>iframe</code> Embeds</em></a></li>
+          <li><a href="https://developers.google.com/youtube/player_parameters"><em>YouTube Embedded Players and Player Parameters</em></a></li>
+        </ul>
+      </li>
+    </ul> -->
+  </section>
+</main>
+<!-- partial -->
+  <script  src="entertainment.js"></script>
+
+</body>
+</html>

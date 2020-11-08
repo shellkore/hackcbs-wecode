@@ -6,8 +6,12 @@ top:0;
 background-color:black;
 height:100%;
 width:7%;
+margin-top:20px;
 }
 
+body{
+    background-color: black ;
+}
 .aside-bar p{
 margin-top:300px;
 -ms-transform:rotate(90deg); /* IE 9 */
@@ -15,4 +19,14 @@ margin-top:300px;
 -webkit-transform:rotate(-90deg); 
 font-size:40px;
 color:white
+}
+
+.lower-part{
+    margin: 0 auto;
+    color : white;
+    font-size: 20px;
+    position: relative;
+    bottom: 0;
+    margin-top: 0;
+    margin-left: 200px;
 }
