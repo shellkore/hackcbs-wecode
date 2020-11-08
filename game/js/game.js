@@ -5,7 +5,9 @@ let config = {
   
     debugger: {
       // Where to inject the debugger into
-      target: document.body
+      target: document.body,
+      enabled: false
+
     },
   
     sensitivity: {
@@ -14,7 +16,13 @@ let config = {
       // How much wider (+) or narrower (-) a smile needs to be to click
       click: 0
     },
-  
+
+    click: {
+      // Morphs to watch for and their required confidences
+      morphs: {
+        6: 0.3
+      }
+    },
     stabilizer: {
       // How much stabilization to use: 0 = none, 3 = heavy
       factor: 1,
@@ -27,8 +35,8 @@ let config = {
       click: {
         // Morphs to watch for and their required confidences
         morphs: {
-          0: 0.5,
-          1: 0.5
+       
+          6: 0.5
         }
       },
   
@@ -43,6 +51,7 @@ let config = {
   
 
 var handsfree = new Handsfree(config);
+
 
 /* ============= GAME SETUP ============= */
 
