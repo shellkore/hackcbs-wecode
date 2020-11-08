@@ -225,9 +225,21 @@ function youTubePlayerDisplayInfos() {
  */
 function youTubePlayerPause() {
     'use strict';
-
+    console.log(youTubePlayer.getPlayerState());
     if (youTubePlayerActive()) {
         youTubePlayer.pauseVideo();
+    }
+}
+
+function ytytytyt() {
+    'use strict';
+    console.log(youTubePlayer.getPlayerState());
+    // to pause
+    if(youTubePlayer.getPlayerState()===1)  {
+        youTubePlayer.pauseVideo();
+    }
+    else if(youTubePlayer.getPlayerState()===2 || youTubePlayer.getPlayerState()===5)  {
+        youTubePlayer.playVideo();
     }
 }
 
@@ -237,7 +249,7 @@ function youTubePlayerPause() {
  */
 function youTubePlayerPlay() {
     'use strict';
-
+console.log(youTubePlayer.getPlayerState());
     if (youTubePlayerActive()) {
         youTubePlayer.playVideo();
     }
