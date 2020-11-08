@@ -360,10 +360,29 @@ body {
     }
 
 }
+.controls{
+    position: fixed;
+    top:0;
+    right: 0;
+    display: flex;
+    z-index: 100;
+    
+}
+.ab{
+    background-color: black;
+    color:white
+}
 </style>
 </head>
 
 <body>
+    <div class="controls">
+        <button id="down" class="ab" onclick="scrollWin(0, 100)">Scroll down</button><br><br>
+        
+        <button id="up" class="ab" onclick="scrollWin(0, -100)">Scroll up</button><br><br>
+        
+        
+        </div> 
     <div class="aside-bar" onclick="location.href = 'home.html';">
         <p>HOME</p>
       </div>
