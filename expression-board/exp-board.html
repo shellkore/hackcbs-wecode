@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Hello!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/handsfree@6.1.1/dist/handsfree.css"
+    />
+    <script src="https://unpkg.com/handsfree@6.1.1/dist/handsfree.js"></script>
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="./script.js" defer></script>
+  </head>
+  <body onload="myFunction()">
+    <div class="screen">
+      <p id="output"></p>
+    </div>
+
+    <section class="keyboard" id="keyboard1">
+      <section class="row-2">
+        <button class="row-select" id="zeroth-row">IndentX</button>
+        <button class="w2 col-select" id="first-col">L-smile</button>
+        <button class="w2 col-select" id="second-col">R-Smile</button>
+        <button class="w2 col-select" id="third-col">Mouth O</button>
+        <button class="w2 col-select" id="fourth-col">Eyes -X</button>
+        <button class="w2 col-select" id="fifth-col">kiss -lips</button>
+      </section>
+      <section class="row-2">
+        <button class="row-select" id="first-row">L-Smile</button>
+        <button class="key w2 row1">a</button>
+        <button class="key w2 row1">b</button>
+        <button class="key w2 row1">c</button>
+        <button class="key w2 row1">d</button>
+        <button class="key w2 row1">e</button>
+      </section>
+      <section class="row-2">
+        <button class="row-select" id="second-row">R-Smile</button>
+        <button class="key w2 row2">f</button>
+        <button class="key w2 row2">g</button>
+        <button class="key w2 row2">h</button>
+        <button class="key w2 row2">i</button>
+        <button class="key w2 row2">j</button>
+      </section>
+      <section class="row-2">
+        <button class="row-select" id="third-row">Mouth O</button>
+        <button class="key w2 row3 col1">l</button>
+        <button class="key w2 row3">m</button>
+        <button class="key w2 row3">n</button>
+        <button class="key w2 row3">o</button>
+        <button class="key w2 row3">p</button>
+      </section>
+
+      <section class="row-2">
+        <button class="row-select" id="fourth-row">Eyes - X</button>
+        <button class="key w2 row4 col1">q</button>
+        <button class="key w2 row4">r</button>
+        <button class="key w2 row4">s</button>
+        <button class="key w2 row4">t</button>
+        <button class="key w2 row4">u</button>
+      </section>
+      <section class="row-2">
+        <button class="row-select" id="fifth-row">kiss -lips</button>
+        <button class="key w2 row5">v</button>
+        <button class="key w2 row5">w</button>
+        <button class="key w2 row5">x</button>
+        <button class="key w2 row5">y</button>
+        <button class="key w2 row5">z</button>
+      </section>
+      <!--    <section class="row-2">
+     <div class="key w2">z</div>
+       <div class="key w12"> Space</div>
+     
+   
+  </section> -->
+      <br />
+    </section>
+
+    <script>
+      // Create a new instance. Use one instance for each camera
+      const handsfree = new Handsfree({});
+
+      // Create a simple plugin that displays pointer values on every frame
+      Handsfree.use("consoleLogger", ({ head }) => {
+        console.log(head.rotation);
+      });
+
+      function myFunction() {
+        // handsfree.start();
+      }
+    </script>
+  </body>
+</html>
