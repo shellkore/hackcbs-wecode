@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hello!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/handsfree@6.1.1/dist/handsfree.css"
+  />
+  <script src="https://unpkg.com/handsfree@6.1.1/dist/handsfree.js"></script>
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="./script.js" defer></script>
+  </head>  
+  <body onload="myFunction()">
+    
+  <div class="screen">
+    <p id="output"></p>
+  </div>
+
+<section class="keyboard" id="keyboard1">
+
+  <section class="row-2">
+    <button class="key w2" id="">a</button>
+    <button class="key w2">b</button>
+    <button class="key w2">c</button>
+    <button class="key w2">d</button>
+    <button class="key w2">e</button>
+   
+   
+  </section>
+   <section class="row-2">
+    <div class="key w2">f</div>
+    <div class="key w2">g</div>
+    <div class="key w2">h</div>
+    <div class="key w2">i</div>
+    <div class="key w2">j</div>
+   
+  </section>
+   <section class="row-2">
+     <div class="key w2">l</div>
+    <div class="key w2">m</div>
+    <div class="key w2">n</div>
+    <div class="key w2">o</div>
+    <div class="key w2">p</div>
+   
+  </section>
+  
+   <section class="row-2">
+      <div class="key w2">q</div>
+    <div class="key w2">r</div>
+    <div class="key w2">s</div>
+    <div class="key w2">t</div>
+    <div class="key w2">u</div>
+   
+  </section>
+   <section class="row-2">
+     <div class="key w2">v</div>
+    <div class="key w2">w</div>
+    <div class="key w2">x</div>
+    <div class="key w2">y</div>
+    <div class="key w2">z</div>
+   
+  </section>
+<!--    <section class="row-2">
+     <div class="key w2">z</div>
+       <div class="key w12"> Space</div>
+     
+   
+  </section> -->
+  <br>
+
+</section>
+    
+    <script>
+     // Create a new instance. Use one instance for each camera
+    const handsfree = new Handsfree({})
+
+    // Create a simple plugin that displays pointer values on every frame
+    Handsfree.use('consoleLogger', ({head}) => {
+      console.log(head.rotation)
+    })
+      
+      function myFunction(){
+        handsfree.start();
+      }
+    </script>
+
+  </body>
+</html>

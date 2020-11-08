@@ -99,10 +99,10 @@
   <script>
     // Create a new instance. Use one instance for each camera
     const handsfree = new Handsfree({})
-
+    Handsfree.disable('head.pointer')
+    Handsfree.disable('head.vertScroll')
     handsfree.start()
-    handsfree.disable('head.pointer')
-    handsfree.disable('head.vertScroll')
+
   </script>
 
     <script src="https://button.glitch.me/button.js" defer></script>

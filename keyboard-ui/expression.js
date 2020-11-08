@@ -7,8 +7,6 @@ Handsfree.disable('head.vertScroll')
 
 var buttonOne = 0, buttonTwo = 0 , buttonThree = 0 , buttonFour = 0, threshold = 50 ;
 
-var buttonFive=0 , buttonSix = 0 ;
-
 
 // Create a simple plugin that displays pointer values on every frame
 Handsfree.use('emojify', ({head}) => {
@@ -60,17 +58,6 @@ Handsfree.use('emojify', ({head}) => {
   if(state.eyesClosed && buttonFour == threshold){
     console.log("4th eyesClosed");
     $("#buttonFour").click();
-  }
-
-  if(state.pursed){
-    buttonFive++;
-  }else if(!state.pursed){
-    buttonFive = 0 ;
-  }
-
-  if(state.pursed && buttonFive == threshold){
-    console.log("5th pursed");
-    $("#buttonFive").click();
   }
 
 });
